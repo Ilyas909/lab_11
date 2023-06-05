@@ -23,7 +23,7 @@ jobs:
       - name: Run tests
         run: |
           python manage.py test core
-  """
+
   build:
     name: Build and push
     if: github.ref == 'refs/heads/main'
@@ -47,4 +47,3 @@ jobs:
           context: .
           push: true
           tags: ${{secrets.DOCKERHUB_REPOSITORY }}
-"""
